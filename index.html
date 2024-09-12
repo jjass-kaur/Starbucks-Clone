@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Coffee Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="./Images/StarbucksLogo.jpg">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./baristaRecommendsComponents.css">
+    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="./learnMoreComponent.css">
+
+    <style>
+        body {
+          font-family: 'Helvetica', sans-serif;
+        }
+      </style>
+</head>
+<body class="bg-gray-100">
+    
+<!-- ! =============================================================================================== -->
+    
+    <!-- Navbar -->
+  <div class="pl-5 pr-5 xl:pl-20 xl:pr-20 mt-5 xl:flex xl:justify-between xl:items-center">
+    <div class="xl:flex xl:items-center ">
+        <div class="flex justify-center">
+            <img src="./Images/logo.png" alt="logo" height="40" width="40" class="cursor-pointer"/>
+        </div>
+        <div class="flex flex-wrap justify-between">
+            <span class="xl:ml-12 ml-2 text-[#212529] font-semibold cursor-pointer underline underline-offset-8 decoration-[#00754a]">
+                Home
+            </span>
+            <span class="xl:ml-12 ml-2 text-[#212529] font-light cursor-pointer">Gift</span>
+            <span class="xl:ml-12 ml-2 text-[#212529] font-light cursor-pointer"> Order </span>
+            <span class="xl:ml-12 ml-2 text-[#212529] font-light cursor-pointer">Pay</span>
+            <span class="xl:ml-12 ml-2 text-[#212529] font-light cursor-pointer">Store</span>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap justify-between items-center mt-5 xl:mt-0 xl:w-3/12">
+        <div class="relative">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer w-5 h-5 text-gray-500 dark:text-gray-400 absolute top-2 left-2">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9748 18.047L15.0698 14.1437C14.8164 13.8904 14.4031 13.8904 14.1506 14.147C13.8973 14.4037 13.8989 14.817 14.1539 15.072L18.0589 18.9754C18.1848 19.102 18.3506 19.1654 18.5164 19.1654C18.6839 19.1654 18.8514 19.1004 18.9781 18.972C19.2314 18.7154 19.2298 18.302 18.9748 18.047ZM0.833984 8.43037C0.833984 4.2412 4.24232 0.832031 8.43148 0.832031C12.6215 0.832031 16.0315 4.2412 16.0315 8.43037C16.0315 8.9262 15.9832 9.42203 15.8882 9.9037C15.819 10.2587 15.4715 10.4879 15.1248 10.4179C14.7723 10.3479 14.5432 10.0045 14.6132 9.65036C14.6915 9.2512 14.7307 8.8412 14.7307 8.43037C14.7307 4.96203 11.9048 2.13953 8.43148 2.13953C4.95898 2.13953 2.13398 4.96203 2.13398 8.43037C2.13398 11.9004 4.95898 14.7229 8.43148 14.7229C10.1882 14.7229 11.819 14.0187 13.0215 12.7404C13.2682 12.477 13.6807 12.467 13.9407 12.7154C14.2015 12.9637 14.2123 13.377 13.9657 13.6395C12.5357 15.1595 10.519 16.0304 8.43148 16.0304C4.24232 16.0304 0.833984 12.6212 0.833984 8.43037Z" fill="black" fill-opacity="0.58"/>
+            </svg>
+            <!-- search bar -->
+            <input type="text" class="text-xs border-2 p-2 rounded-3xl pl-8 w-56 focus:border-black" placeholder="Looking for something specific?">
+        </div>
+        <div>
+            <!-- profile -->
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer w-8 h-8">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 1.5C27.1127 1.5 34.5 8.8873 34.5 18C34.5 27.1127 27.1127 34.5 18 34.5C8.8873 34.5 1.5 27.1127 1.5 18C1.5 8.8873 8.8873 1.5 18 1.5ZM18 3.15C9.79857 3.15 3.15 9.79857 3.15 18C3.15 26.2014 9.79857 32.85 18 32.85C26.2014 32.85 32.85 26.2014 32.85 18C32.85 9.79857 26.2014 3.15 18 3.15ZM18 19.425C22.5978 19.425 26.325 23.1522 26.325 27.75C26.325 28.2056 25.9556 28.575 25.5 28.575C25.0444 28.575 24.675 28.2056 24.675 27.75C24.675 24.0635 21.6865 21.075 18 21.075C14.3135 21.075 11.325 24.0635 11.325 27.75C11.325 28.2056 10.9556 28.575 10.5 28.575C10.0444 28.575 9.675 28.2056 9.675 27.75C9.675 23.1522 13.4022 19.425 18 19.425ZM18 7.875C20.6924 7.875 22.875 10.0576 22.875 12.75C22.875 15.4424 20.6924 17.625 18 17.625C15.3076 17.625 13.125 15.4424 13.125 12.75C13.125 10.0576 15.3076 7.875 18 7.875ZM18 9.525C16.2189 9.525 14.775 10.9689 14.775 12.75C14.775 14.5311 16.2189 15.975 18 15.975C19.7811 15.975 21.225 14.5311 21.225 12.75C21.225 10.9689 19.7811 9.525 18 9.525Z" fill="black" fill-opacity="0.58"/>
+            </svg> 
+        </div>
+    </div>
+</div>
+
+
+<!-- ! =============================================================================================== -->
+
+<!-- Green banner -->
+<div class="bg-[#1e3932] w-100 mt-5 mb-5 lg:pl-20 p-6 lg:pr-20 flex items-center xl:justify-between flex-col xl:flex-row">
+    <div>
+        <span class="text-white text-l font-light text-center cursor-pointer">Starbucks</span>
+    </div>
+
+
+    <div>
+        <button class="text-white text-sm border-white border-2 p-1 pl-2 pr-2 rounded-3xl mt-2 xl:mt-0">Know More</button>
+    </div>
+</div>
+
+
+
+<!-- ! =============================================================================================== -->
+
+<!-- Handcrafted Curations -->
+<div class="xl:pl-20 xl:pr-20 pl-5 pr-5 mt-10">
+    <div class="flex justify-center xl:justify-start">
+        <span class="text-[#1e3932] font-bold text-2xl">Handcrafted Curations</span>
+    </div>
+
+    <div class="mt-5 flex justify-between flex-wrap">
+        <div class="w-28 text-center">
+            <img class="rounded-full cursor-pointer mb-2 hover:border-[#00754a] hover:border-2" src="https://starbucksstatic.cognizantorderserv.com/Category/Small/Bestseller.jpg" alt="Bestseller">
+
+            <span class="text-[#212529] text-sm font-semibold">Bestseller</span>
+        </div>
+
+        <div class="w-28 text-center">
+            <img class="rounded-full cursor-pointer mb-2 hover:border-[#00754a] hover:border-2" src="https://starbucksstatic.cognizantorderserv.com/Category/Small/Drinks.jpg" alt="Drinks">
+
+            <span class="text-[#212529] text-sm font-semibold">Drinks</span>
+        </div>
+
+        <div class="w-28 text-center">
+            <img class="rounded-full cursor-pointer mb-2 hover:border-[#00754a] hover:border-2" src="https://starbucksstatic.cognizantorderserv.com/Category/Small/Food.jpg" alt="Food">
+
+            <span class="text-[#212529] text-sm font-semibold">Food</span>
+        </div>
+
+        <div class="w-28 text-center">
+            <img class="rounded-full cursor-pointer mb-2 hover:border-[#00754a] hover:border-2" src="	https://starbucksstatic.cognizantorderserv.com/Category/Small/Merchandise.jpg" alt="Merchandise">
+
+            <span class="text-[#212529] text-sm font-semibold">Merchandise</span>
+        </div>
+
+        <div class="w-28 text-center">
+            <img class="rounded-full cursor-pointer mb-2 hover:border-[#00754a] hover:border-2" src="https://starbucksstatic.cognizantorderserv.com/Category/Small/CoffeeAtHome.jpg" alt="CoffeeAtHome">
+
+            <span class="text-[#212529] text-sm font-semibold">Coffee At Home</span>
+        </div>
+
+        <div class="w-28 text-center">
+            <img class="rounded-full cursor-pointer mb-2 hover:border-[#00754a] hover:border-2" src="https://starbucksstatic.cognizantorderserv.com/Category/Small/ReadyToEat.jpg" alt="ReadyToEat">
+
+            <span class="text-[#212529] text-sm font-semibold">Ready to Eat</span>
+        </div>
+    </div>
+</div>
+  
+
+
+<!-- ! =============================================================================================== -->
+
+<!-- Barista Recommends -->
+<div class="p-5 bg-[#edebe9] w-100 mt-14 lg:pl-20 lg:pr-20 pb-10 relative">
+    <div class="pt-5 flex justify-between">
+        <span class="text-[#1e3932] font-bold text-2xl">Barista Recommends</span>
+
+        <span class="text-[#00754a] font-semibold text-sm cursor-pointer">View Menu</span>
+    </div>
+    
+    <div class="absolute -top-2 right-1">
+        <img src="https://www.starbucks.in/assets/icon/greyleafright.svg" alt="" width="57" height="70">  
+    </div>
+
+    <div class="mt-10 relative">
+        <div class="swiper-button image-swiper-button-prev absolute">
+            <img src="https://www.starbucks.in/swiperbtnleft.22de7f3e8db5d523.svg
+            " alt="prev">
+        </div>
+
+        <div class="swiper-button image-swiper-button-next absolute">
+            <img src="https://www.starbucks.in/swiperbtnright.cbc1d309941ecd98.svg" alt="next">
+        </div>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="w-30 h-auto bg-white rounded-lg shadow-sm p-4 cursor-pointer">
+                        <div class="grid grid-cols-[1fr_3fr]">
+                            <div>
+                                <img src="https://www.starbucks.in/assets/icon/placeholder.webp" alt="Capuccino" class="rounded-lg h-20 object-cover" width="80">
+                            </div>
+                            <div class="p-2">
+                                <img src="https://www.starbucks.in/assets/icon/veg.svg" alt="">
+                                <p class="font-semibold">Capuccino</p>
+                                <p class="text-xs text-[#6c757d]">SHORT().392 kcal</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 flex justify-between items-center">
+                            <div>
+                                <span class="font-semibold text-sm">
+                                    ₹ 283<span class="text-xs">.50</span>
+                                </span>
+                            </div>
+
+                            <div>
+                                <button class="border-2 p-2 w-32 rounded-3xl text-white bg-[#00754a]">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="w-30 h-auto bg-white rounded-lg shadow-sm p-4 cursor-pointer">
+                        <div class="grid grid-cols-[1fr_3fr]">
+                            <div>
+                                <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/webP/100447.webp" alt="SignatureHotChocolate" class="rounded-lg h-20 object-cover" width="80">
+                            </div>
+                            <div class="p-2">
+                                <img src="https://www.starbucks.in/assets/icon/veg.svg" alt="">
+                                <p class="font-semibold">Signature Hot Chocolate</p>
+                                <p class="text-xs text-[#6c757d]">SHORT(237 ML).284 kcal</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 flex justify-between items-center">
+                            <div>
+                                <span class="font-semibold text-sm">
+                                    ₹ 309<span class="text-xs">.75</span>
+                                </span>
+                            </div>
+
+                            <div>
+                                <button class="border-2 p-2 w-32 rounded-3xl text-white bg-[#00754a]">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slide 3 -->
+                <div class="swiper-slide">
+                    <div class="w-30 h-auto bg-white rounded-lg shadow-sm p-4 cursor-pointer">
+                        <div class="grid grid-cols-[1fr_3fr]">
+                            <div>
+                                <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/webP/112573.webp" alt="VanillaMilkshake" class="rounded-lg h-20 object-cover" width="80">
+                            </div>
+                            <div class="p-2">
+                                <img src="https://www.starbucks.in/assets/icon/veg.svg" alt="">
+                                <p class="font-semibold">Vanilla Milkshake</p>
+                                <p class="text-xs text-[#6c757d]"> TALL(354 ML) .PER SERVE (354ml)  - 531 Kcal </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 flex justify-between items-center">
+                            <div>
+                                <span class="font-semibold text-sm">
+                                    ₹ 378<span class="text-xs">.00</span>
+                                </span>
+                            </div>
+
+                            <div>
+                                <button class="border-2 p-2 w-32 rounded-3xl text-white bg-[#00754a]">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slider 4 -->
+                <div class="swiper-slide">
+                    <div class="w-30 h-auto bg-white rounded-lg shadow-sm p-4 cursor-pointer">
+                        <div class="grid grid-cols-[1fr_3fr]">
+                            <div>
+                                <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/webP/104997.webp" alt="ColdBrewBlack" class="rounded-lg h-20 object-cover" width="80">
+                            </div>
+                            <div class="p-2">
+                                <img src="https://www.starbucks.in/assets/icon/veg.svg" alt="">
+                                <p class="font-semibold">Cold Brew Black</p>
+                                <p class="text-xs text-[#6c757d]"> SHORT(Short Cold Brew Black)</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 flex justify-between items-center">
+                            <div>
+                                <span class="font-semibold text-sm">
+                                    ₹ 299<span class="text-xs">.25</span>
+                                </span>
+                            </div>
+
+                            <div>
+                                <button class="border-2 p-2 w-32 rounded-3xl text-white bg-[#00754a]">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider 5 -->
+                <div class="swiper-slide">
+                    <div class="w-30 h-auto bg-white rounded-lg shadow-sm p-4 cursor-pointer">
+                        <div class="grid grid-cols-[1fr_3fr]">
+                            <div>
+                                <img src="	https://www.starbucks.in/assets/icon/placeholder.webp" alt="TallJavaChipFrappuccino" class="rounded-lg h-20 object-cover" width="80">
+                            </div>
+                            <div class="p-2">
+                                <img src="https://www.starbucks.in/assets/icon/veg.svg" alt="">
+                                <p class="font-semibold">Tall Java Chip Frappuccino</p>
+                                <p class="text-xs text-[#6c757d]"> TALL()</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 flex justify-between items-center">
+                            <div>
+                                <span class="font-semibold text-sm">
+                                    ₹ 388<span class="text-xs">.50</span>
+                                </span>
+                            </div>
+
+                            <div>
+                                <button class="border-2 p-2 w-32 rounded-3xl text-white bg-[#00754a]">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+  slidesPerView: 3,
+  spaceBetween: 50,
+  mousewheel: true,
+  navigation: {
+    nextEl: '.image-swiper-button-next',
+    prevEl: '.image-swiper-button-prev',
+    disabledClass: "swiper-button-disabled",
+  },
+  breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      730: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1050: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1280: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    }
+});
+
+
+</script>
+
+
+<!-- ! =============================================================================================== -->
+
+<!-- Banner -->
+
+<div class="mt-10 relative">
+    <!-- Swiper Navigation Buttons -->
+    <div class="swiper-button-banner swiper-button-prev-banner image-swiper-button-prev-banner">
+        <img src="https://www.starbucks.in/swiperbtnleft.22de7f3e8db5d523.svg" alt="prev">
+    </div>
+
+    <div class="swiper-button-banner swiper-button-next image-swiper-button-next-banner">
+        <img src="https://www.starbucks.in/swiperbtnright.cbc1d309941ecd98.svg" alt="next">
+
+    </div>
+
+    <!-- Swiper Container -->
+    <div class="swiper banner-swiper p-6">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="w-full rounded-lg shadow-sm p-4 bg-[#09907f] relative cursor-pointer">
+                    <div class="flex justify-end">  
+                        <span class="text-xs font-semibold">*T&C Apply</span>
+                    </div>
+                    <div class="grid grid-cols-[1fr_9fr] gap-x-4">
+                        <div>
+                            <img class="absolute left-0" src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/285_x_595_App_removebg_preview_2_c4bc942184.png" alt="" width="80">
+                        </div>
+                        <div class="z-50">
+                            <p class="text-[#ffffff]">Starbucks</p>
+                            <p class="mt-2 font-semibold text-xl text-[#ffffff]">Beverage Subscription</p>
+                            <p class="mt-2 text-[#ffffff]">Starbucks Subscription is Back! Your Favourites for Less. Tap for Details. T&C Apply.</p>
+                            <div class="mt-5 flex justify-between">
+                                <div class="flex flex-col">
+                                    <span class="text-[#ffffff]">Priced At</span>
+                                    <span class="font-bold text-[#ffffff]">
+                                        ₹ 1799 <span class="font-normal">.00</span>
+                                    </span>
+                                </div>
+                                <div class="btn">
+                                    <button class="font-semibold bg-[#fff] text-[#000000de] w-52 rounded-full h-12 text-lg">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="w-full rounded-lg shadow-sm p-4 bg-[#006241] relative cursor-pointer">
+                    <div class="flex justify-end">  
+                        <span class="text-xs text-[#ffffff] font-semibold">*Limited Time Offer</span>
+                    </div>
+                    <div class="grid grid-cols-[1fr_9fr] gap-x-4">
+                        <div>
+                            <img class="absolute left-0" src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/Group_1087_b1db5faed6.png" alt="New Product" width="80">
+                        </div>
+                        <div class="z-50">
+                            <p class="text-[#ffffff]">New Arrival</p>
+                            <p class="mt-2 font-semibold text-xl text-[#ffffff]">Starbucks Special Edition Mug</p>
+                            <p class="mt-2 text-[#ffffff]">Indulge in the season's feastnig! Make your sips extra special. Explore Menu.</p>
+                            <div class="mt-5 flex justify-between">
+                                <div class="flex flex-col">
+                                    <span class="text-[#ffffff]">Starting From</span>
+                                    <span class="font-bold text-[#ffffff]">₹250</span>
+                                </div>
+                                <div class="btn">
+                                    <button class="font-semibold bg-[#00754a] text-[#ffffff] w-52 rounded-full h-12 text-lg">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more slides here if needed -->
+        </div>
+
+        
+    </div>
+</div>
+
+<!-- Include Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const bannerSwiper = new Swiper('.banner-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true, 
+        navigation: {
+            nextEl: '.image-swiper-button-next-banner',
+            prevEl: '.image-swiper-button-prev-banner',
+            disabledClass: "swiper-button-disabled",
+        },
+        pagination: {
+            clickable: true,
+        }
+    });
+</script>
+
+<!-- ! =============================================================================================== -->
+
+<!-- Learning more component -->
+<div class="p-5 lg:pl-20 lg:pr-20 bg-[#edebe9] pb-20">
+    <div class="flex justify-between items-center">
+        <span class="text-[#1e3932] font-bold text-2xl">Learn more about the world of coffee!</span>
+        <span class="font-semibold text-sm text-[#00754a]">Discover More</span>
+    </div>
+
+    <div class="mt-10 rounded-lg cursor-pointer">
+        <div class="flex flex-col justify-between rounded-lg cursor-pointer image pl-10 pt-5 pb-10">
+            <span class="text-[#096] bg-[#E6EDEB] p-1 rounded-md w-20" style="font-size: 11px ;">Coffee Culture</span>
+                <div class="text-white">
+                    <p class="text-2xl font-semibold">Art & Science Of Coffee Brewing</p>
+                    <p class="mt-2 font-light">Master the perfect brew with Starbucks! Learn the art and science of coffee brewing.</p>
+                    <button class="bg-white text-xs font-semibold text-[#1e3932] mt-14 pl-16 pr-16 p-2 rounded-full">Learn More</button>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- ! =============================================================================================== -->
+
+
+<!-- Footer -->
+
+<div class="p-5 lg:pl-20 lg:pr-20 bg-[#0e382c] w-full">
+    <div class="flex justify-between flex-wrap">
+        <div class="mt-2 cursor-pointer">
+            <img src="./Images/logo.png" alt="logo">
+        </div>
+
+        <div class="text-white mt-2 cursor-pointer">
+            <p class="mt-2 font-semibold text-xl">About Us</p>
+            <p class="mt-2">Our Heritage</p>
+            <p class="mt-2">Our Company</p>
+            <p class="mt-2">Coffeehouse</p>
+        </div>
+
+        <div class="text-white mt-2 cursor-pointer">
+            <p class="mt-2 font-semibold text-xl">Responsibility</p>
+            <p class="mt-2">Community</p>
+            <p class="mt-2">Ethical Sourcing</p>
+            <p class="mt-2">Environment</p>
+            <p class="mt-2">Diversity</p>
+        </div>
+
+        <div class="text-white mt-2 cursor-pointer">
+            <p class="mt-2 font-semibold text-xl">Quick Links</p>
+            <p class="mt-2">Careers</p>
+            <p class="mt-2">Season's Gifting</p>
+            <p class="mt-2">FAQs</p>
+            <p class="mt-2">Customer Service</p>
+            <p class="mt-2">Delivery</p>
+        </div>
+
+        <div class="text-white mt-2 cursor-pointer">
+            <p class="mt-2 font-semibold text-xl">SOCIAL MEDIA</p>
+            <div class="mt-2 flex justify-between">
+                <span><img src="https://www.starbucks.in/assets/icon/instagram.svg" alt="instagram"></span>
+
+                <span><img src="https://www.starbucks.in/assets/icon/facebook.svg" alt="facebook"></span>
+
+                <span><img src="https://www.starbucks.in/assets/icon/twitter.svg" alt="twitter"></span>
+            </div>            
+        </div>
+
+
+        <div class="mt-2">
+            <p class="mt-2 cursor-pointer"><img src="https://www.starbucks.in/assets/images/appstoreiOS.png" alt="iOSstore"></p>
+
+            <p class="mt-2 cursor-pointer"><img src="https://www.starbucks.in/assets/images/appstoreAndroid.png" alt="appstore"></p>
+        </div>
+    </div>
+
+    <hr class="mt-16" />
+    <div class="text-white text-sm mt-5 font-thin flex justify-between">
+        <div>
+            <span>Web Accessibility <span class="text-xl ml-2 mr-2">&#124;</span>
+            </span>
+
+            <span>Privacy Statement <span class="text-xl ml-2 mr-2">&#124;</span>
+            </span>
+
+            <span>Terms of Use <span class="text-xl ml-2 mr-2">&#124;</span>
+            </span>
+
+            <span>Contact Us</span>
+            </span>
+        </div>
+
+
+        <div class="text-xs">
+            <span>© 2024 Starbucks Coffee Company. All rights reserved.</span>
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
